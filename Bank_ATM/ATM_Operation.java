@@ -9,4 +9,5 @@ interface ATM_Operation_Interface {
     public void depositAmount(double depositAmount);
 
     public void View_Some_Details();
+
 }

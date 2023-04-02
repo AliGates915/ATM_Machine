@@ -1,17 +1,23 @@
 package Bank_ATM;
 
+import java.io.File;
+import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+
 import java.util.Scanner;
 public class Bank_ATM {
     // This is main
     public static void main(String[] args)
     {
         ATM_Operation_Interface operation = new ATM_Operation_ImplementsImpl();
-        int atm_number = 12345;
-        int pin_code = 12345;
+        int atm_number = 123;
+        int pin_code = 123;
         Scanner sc = new Scanner(System.in);
-        System.out.println("***||**** Welcome To ATM Machine ****||***");
+        System.out.println("\n ***||**** Welcome To ATM Machine ****||***");
         System.out.print("Enter ATM Number : ");
         int ATMNumber = sc.nextInt();
         System.out.print("Enter PIN CODE : ");
@@ -49,6 +55,7 @@ public class Bank_ATM {
                 }
                 else if (ch==4)
                 {
+                    operation.view_Balance();
                     operation.View_Some_Details();
                 }
                 else if(ch==5)
